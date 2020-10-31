@@ -1,0 +1,95 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+.container .image {
+    display: grid;
+    width: 100%;
+    grid-template-areas: 'previous gallery gallery gallery gallery next'
+                         'previous gallery gallery gallery gallery next';
+}
+
+.container .image .previous {
+    grid-area: previous;
+    min-height: 500px;
+    /*background-color: fuchsia;*/
+    position: relative;
+}
+.container .image .previous .left {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+.container .image .gallery {
+    grid-area: gallery;
+    min-height: 500px;
+    /*background-color: rebeccapurple;*/
+    position: relative;
+}
+.container .image .gallery .preview {
+    display: block;
+    position: absolute;
+    max-width: 100%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+.container .image .next {
+    grid-area: next;
+    min-height: 500px;
+    /*background-color: lawngreen;*/
+    position: relative;
+}
+.container .image .next .right {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+.empty {
+    display: none;
+}
+
+
+/*RESPONSIVE BREAKPOINTS*/
+@media (max-width: 575.98px) {
+    .container .image {
+        grid-template-areas: 'previous'
+                             'gallery'
+                             'next';
+    }
+}
+
+
+@media (max-width: 767.98px) {
+    .container .image {
+        grid-template-areas: 'previous'
+        'gallery'
+        'next';
+    }
+}
+
+
+@media (max-width: 991.98px) {
+    .container .image {
+        grid-template-areas: 'previous'
+        'gallery'
+        'next';
+    }
+}
+
+
+@media (max-width: 1199.98px) {
+    .container .image {
+        grid-template-areas: 'previous'
+        'gallery'
+        'next';
+    }
+}
+
